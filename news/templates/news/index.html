@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>
+            News
+        </title>
+    </head>
+
+    <body>
+        <h1 style="text-align: center;"> Today's News Headlines </h1>
+        <h2>Date : {{ date }}</h2>
+        <div>
+            <h1>__________________________________________________________________________________________________________________
+            </h1>
+            {% for title, url, image in final_news %}
+            <h3>{{ title }}</h3><br>
+            <img src="{{ image }}"><br>
+            <a href="{{ url }}">Read More</a>
+
+            <h1>_________________________________________________________________________________________________________________________
+            </h1>
+            {% endfor %}
+
+        </div>
+
+    </body>
+    <style>
+        img {
+            width: 50%;
+            height: 300px;
+        }
+
+        body {
+            background-color: blanchedalmond;
+        }
+
+    </style>
+
+</html>
